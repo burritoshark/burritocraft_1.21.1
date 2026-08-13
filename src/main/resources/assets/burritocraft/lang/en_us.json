@@ -1,0 +1,13 @@
+{
+  "itemGroup.burritocraft": "Example Mod Tab",
+  "block.burritocraft.example_block": "Example Block",
+  "item.burritocraft.example_item": "Example Item",
+
+  "burritocraft.configuration.title": "burritocraft Configs",
+  "burritocraft.configuration.section.burritocraft.common.toml": "burritocraft Configs",
+  "burritocraft.configuration.section.burritocraft.common.toml.title": "burritocraft Configs",
+  "burritocraft.configuration.items": "Item List",
+  "burritocraft.configuration.logDirtBlock": "Log Dirt Block",
+  "burritocraft.configuration.magicNumberIntroduction": "Magic Number Text",
+  "burritocraft.configuration.magicNumber": "Magic Number"
+}
