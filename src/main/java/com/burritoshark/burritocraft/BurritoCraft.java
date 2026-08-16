@@ -1,5 +1,6 @@
 package com.burritoshark.burritocraft;
 
+import com.burritoshark.burritocraft.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -50,6 +51,9 @@ public class BurritoCraft {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        //calls the ModItems class from the package com.burritoshark.burritocraft.item
+        ModItems.ITEMS.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -72,7 +76,10 @@ public class BurritoCraft {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        // this adds bismuth from the BISMUTH thing in ModItems to the ingredients creative mode tab
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BISMUTH);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
